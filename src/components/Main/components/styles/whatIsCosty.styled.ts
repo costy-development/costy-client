@@ -31,6 +31,10 @@ export const WhatIsCosty = styled.div`
 
     .info {
       padding-right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: ${({ theme }) => theme.fontSize.md};
     }
 
     p {

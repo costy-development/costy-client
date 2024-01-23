@@ -29,6 +29,12 @@ const AppLayout: React.FC<AppLayoutT> = ({
     <Styled.AppLayout className={showBgLine ? "lined" : ""}>
       <h1 className="app-head">Costy costy Costi costi</h1>
 
+      {showBgLine && (
+        <video autoPlay={true} muted loop id="bgVideo">
+          <source src="/videos/bg-video.mp4" type="video/mp4" />
+        </video>
+      )}
+
       {showLogo && <Logo />}
 
       {showSocials && <UI.SocialLinks />}

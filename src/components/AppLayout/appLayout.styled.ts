@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
 export const AppLayout = styled.div`
-  /* background: url("/icons/bg-line.svg");
-  background-repeat: no-repeat;
-  background-position: -25rem -35rem;
-  overflow-x: hidden;
-  background-size: cover; */
   position: relative;
   min-height: 100vh;
 
-  &.lined::after {
+  video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* &.lined::after {
     content: "";
     position: fixed;
     z-index: -1;
@@ -20,7 +23,7 @@ export const AppLayout = styled.div`
     height: 150%;
     background-color: #e2e5e7;
     transform: rotate(-20deg) translateX(-50%);
-  }
+  } */
 
   .app-head {
     transform: translateY(-20rem);
