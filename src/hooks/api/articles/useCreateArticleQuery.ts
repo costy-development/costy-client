@@ -38,7 +38,7 @@ export default function useCreateArticleQuery(slug?: string) {
         });
       }
 
-      // form.reset({ title: "", body: "" });
+      form.reset({ title: "", body: "" });
       navigate(PATHS.dashboard_create_article_page);
     } catch (error) {
       NODE_MODE === "DEV" && console.log(error);

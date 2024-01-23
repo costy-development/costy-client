@@ -49,7 +49,6 @@ export const CreateArticle = styled.div`
 
   .quill .ql-toolbar.ql-snow,
   .quill .ql-container.ql-snow {
-    overflow: hidden;
     border-radius: 1rem;
     border: 1px solid ${({ theme }) => theme.colors.gray};
     background: ${({ theme }) => theme.colors.white};
