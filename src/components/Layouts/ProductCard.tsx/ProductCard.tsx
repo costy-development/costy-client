@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardT> = ({
       <div className="product-price">
         <span>ფასი:</span>
         &nbsp;
-        <strong>{product.price}</strong>
+        <strong>{product.price}</strong>&nbsp;₾
       </div>
 
       {showActions && <CardActions product={product} />}

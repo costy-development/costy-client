@@ -35,6 +35,26 @@ const CreateArticle: React.FC<CreateArticleT> = () => {
     });
   }, [article]);
 
+  const body = form.getValues("body");
+
+  useEffect(() => {
+    const quill = document.querySelector(".ql-container.ql-snow");
+    const timeoutId = setTimeout(() => {
+      if (!quill) return;
+
+      const images = Array.from(quill.querySelectorAll("img"));
+
+      if (images.length > 0)
+        images.forEach((image) => {
+          image.setAttribute("loading", "lazy");
+        });
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [body]);
+
   return (
     <Styled.CreateArticle>
       <div className="editor-wrapper">
